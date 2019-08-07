@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ListaDePresencaListComponent, ListaDePresencaEditComponent } from './lista-de-presenca';
+import { ListaDePresencaListComponent, ListaDePresencaEditComponent, ListaDePresencaCreateComponent } from './lista-de-presenca';
 
 const routes: Routes = [
   {
@@ -8,8 +8,16 @@ const routes: Routes = [
     component: ListaDePresencaListComponent
   },
   {
+    path: 'listapresenca',
+    component: ListaDePresencaListComponent
+  },
+  {
     path: 'listapresenca/edit',
     component: ListaDePresencaEditComponent
+  },
+  {
+    path: 'listapresenca/create',
+    component: ListaDePresencaCreateComponent
   }
 ];
 
