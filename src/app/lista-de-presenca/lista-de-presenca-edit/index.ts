@@ -1,0 +1,1 @@
+export * from './lista-de-presenca-edit.component';

@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ListaDePresencaListComponent } from './lista-de-presenca';
+import { ListaDePresencaListComponent, ListaDePresencaEditComponent } from './lista-de-presenca';
 
 const routes: Routes = [
   {
     path: '',
     component: ListaDePresencaListComponent
+  },
+  {
+    path: 'listapresenca/edit',
+    component: ListaDePresencaEditComponent
   }
 ];
 
