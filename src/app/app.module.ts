@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaDePresencaModule } from './lista-de-presenca';
+import { ListaDePresencaModule, ListaPresencaService } from './lista-de-presenca';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,9 @@ import { ListaDePresencaModule } from './lista-de-presenca';
     AppRoutingModule,
     ListaDePresencaModule
   ],
-  providers: [],
+  providers: [
+    ListaPresencaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
