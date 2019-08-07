@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ListaDePresencaListComponent } from './lista-de-presenca-list/lista-de-presenca-list.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ListaDePresencaListComponent],
   imports: [
     CommonModule
   ]
