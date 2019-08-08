@@ -6,7 +6,7 @@ import { ListaDePresencaCreateComponent } from './lista-de-presenca-create/lista
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { ListaPresencaService } from './shered';
+import { ListaPresencaService } from './shared';
 
 
 
