@@ -41,8 +41,8 @@ export class ListaPresencaService {
     this.db.object(`lista-presenca/${key}`).remove();
   }
 
-  findById(){
-
+  findById(key: string){
+    return this.db.object(`lista-presenca/${key}`).valueChanges();
   }
 
   changeStatus(){

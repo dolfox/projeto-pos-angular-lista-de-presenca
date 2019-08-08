@@ -16,6 +16,7 @@ export class ListaDePresencaListComponent implements OnInit {
 
   ngOnInit() {
     this.listas = this.listaService.listAll();
+    //console.log(this.listas)
   }
 
   delete(key: string) {
