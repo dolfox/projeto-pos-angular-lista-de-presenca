@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ListaDePresenca} from '../shered';
-import { ListaPresencaDataService, ListaPresencaService } from '../shered';
+import { ListaDePresenca} from '../shared';
+import { ListaPresencaDataService, ListaPresencaService } from '../shared';
 
 @Component({
   selector: 'app-lista-de-presenca-create',
