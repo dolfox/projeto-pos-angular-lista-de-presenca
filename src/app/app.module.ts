@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaDePresencaModule, ListaPresencaService } from './lista-de-presenca';
+import { ListaDePresencaModule } from './lista-de-presenca';
 
 import { environment } from '../environments/environment';
 
@@ -22,7 +22,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     AngularFireDatabaseModule
   ],
   providers: [
-    ListaPresencaService
+  
   ],
   bootstrap: [AppComponent]
 })

@@ -1,31 +1,22 @@
 <h1>Cadastrar Convidado</h1>
 
 <div class="well">
-  <form >
+  <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="nome">Nome:</label>
       <input 
         type="text"
         class="form-control"
         id="nome"
-        name="nome"
-        minlength="5" 
-        required> 
-      <div class="alert alert-danger">
-        <div >
-          Digite o nome.
-        </div>
-        <div >
-          O nome deve conter ao menos 5 caracteres.
-        </div>
-      </div>
+        [(ngModel)]="lista.nome"
+        name="nome"> 
     </div>
     <div class="form-group text-center">
       <input 
         type="submit"
         class="btn btn-success"
         value="Cadastrar">
-      <a 
+      <a [routerLink]="['/listapresenca']"
         class="btn btn-default">
         <span class="glyphicon glyphicon-chevron-left" 
           aria-hidden="true"></span> Voltar
