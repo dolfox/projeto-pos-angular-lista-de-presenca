@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ListaDePresenca, ListaPresencaService } from '../shered';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-lista-de-presenca-edit',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaDePresencaEditComponent implements OnInit {
 
-  constructor() { }
+  listaPresenca: Observable<any>;
+  teste: string = 'teste string';
+
+  constructor(private route: ActivatedRoute, private listaPresencaService: ListaPresencaService) { }
 
   ngOnInit() {
+    let key = this.route.snapshot.params['key'];
+    this.listaPresenca = this.listaPresencaService.listAll();
+    //this.listaPresenca = this.listaPresencaService.findById(key);
+    console.log(this.listaPresenca);
   }
 
 }
