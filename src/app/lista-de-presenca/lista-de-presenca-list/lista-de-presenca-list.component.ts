@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ListaDePresenca, ListaPresencaService} from '../shered';
-import { ListaPresencaDataService } from '../shered';
+import { ListaDePresenca, ListaPresencaService} from '../shared';
+import { ListaPresencaDataService } from '../shared';
 import { Observable } from 'rxjs';
 
 @Component({
