@@ -12,7 +12,7 @@ const routes: Routes = [
     component: ListaDePresencaListComponent
   },
   {
-    path: 'listapresenca/edit',
+    path: 'listapresenca/edit/:key',
     component: ListaDePresencaEditComponent
   },
   {
