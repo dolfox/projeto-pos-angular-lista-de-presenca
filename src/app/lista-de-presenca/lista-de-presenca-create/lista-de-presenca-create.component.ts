@@ -22,14 +22,6 @@ export class ListaDePresencaCreateComponent implements OnInit {
 
   ngOnInit() {
     this.lista = new ListaDePresenca();
-    // this.listaPresencaDataService.currentLista.subscribe(data => {
-    //   if (data.lista && data.key) {
-    //     this.lista = new ListaDePresenca();
-    //     this.lista.nome = data.lista.nome;
-    //     this.lista.status = false;
-    //     this.key = data.key;
-    //   }
-    // })
   }
 
   onSubmit() {
