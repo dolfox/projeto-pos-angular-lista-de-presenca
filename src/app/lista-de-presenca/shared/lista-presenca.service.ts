@@ -4,12 +4,14 @@ import { ListaDePresenca } from './lista-presenca';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
 
+import { Router } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ListaPresencaService {
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private router: Router, private db: AngularFireDatabase) { }
 
   listAll(){
     return this.db.list('lista-presenca')

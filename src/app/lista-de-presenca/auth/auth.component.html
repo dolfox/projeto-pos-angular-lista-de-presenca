@@ -1,0 +1,8 @@
+<div *ngIf="afAuth.authState | async as authUser">
+<p>{{ authUser.displayName }}</p>
+</div>
+<div class="wrapper fadeInDown center">
+    <div>
+        <button class="btn btn-primary" (click)="login()">Logar com Google</button>
+    </div>
+</div>
