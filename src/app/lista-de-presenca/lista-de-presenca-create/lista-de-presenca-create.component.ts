@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ListaDePresenca} from '../shared';
 import { ListaPresencaDataService, ListaPresencaService } from '../shared';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-de-presenca-create',
@@ -9,10 +11,12 @@ import { ListaPresencaDataService, ListaPresencaService } from '../shared';
 })
 export class ListaDePresencaCreateComponent implements OnInit {
 
+  @ViewChild('formListaPresenca', {static: true}) formListaPresenca: NgForm;
+
   lista: ListaDePresenca;
   key: string = '';
 
-  constructor(private listaPresencaDataService: ListaPresencaDataService, private listaPresencaService: ListaPresencaService) { }
+  constructor(private listaPresencaDataService: ListaPresencaDataService, private listaPresencaService: ListaPresencaService, private router: Router) { }
 
   ngOnInit() {
     this.lista = new ListaDePresenca();
@@ -30,7 +34,10 @@ export class ListaDePresencaCreateComponent implements OnInit {
     if (this.key) {
       this.listaPresencaService.update(this.lista, this.key);
     } else {
-      this.listaPresencaService.create(this.lista);
+      if (this.formListaPresenca.form.valid) {
+        this.listaPresencaService.create(this.lista);
+        this.router.navigate(["/listapresenca"]);
+      }
     }
     this.lista = new ListaDePresenca();
   }

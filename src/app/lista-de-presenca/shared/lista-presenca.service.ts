@@ -3,14 +3,13 @@ import { Injectable } from '@angular/core';
 import { ListaDePresenca } from './lista-presenca';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListaPresencaService {
 
-  constructor(private db: AngularFireDatabase, private router: Router) { }
+  constructor(private db: AngularFireDatabase) { }
 
   listAll(){
     return this.db.list('lista-presenca')
@@ -27,7 +26,6 @@ export class ListaPresencaService {
     .then((result: any) => {
       console.log(result.key);
     });
-    this.router.navigate(["/listapresenca"]);
   }
 
   update(listaPresenca: ListaDePresenca, id: string){
