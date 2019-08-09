@@ -16,9 +16,10 @@ export class ListaDePresencaEditComponent implements OnInit {
   constructor(private route: ActivatedRoute, private listaPresencaService: ListaPresencaService) { }
 
   ngOnInit() {
+    this.listaPresenca = new Observable();
     let key = this.route.snapshot.params['key'];
-    this.listaPresenca = this.listaPresencaService.listAll();
-    //this.listaPresenca = this.listaPresencaService.findById(key);
+    this.listaPresenca = this.listaPresencaService.findById(key);
+    //this.listaPresenca = this.listaPresencaService.listAll();
     console.log(this.listaPresenca);
   }
 
