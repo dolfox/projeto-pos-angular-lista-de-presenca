@@ -7,11 +7,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { ListaPresencaService } from './shared';
+import { AuthComponent } from './auth/auth.component';
 
 
 
 @NgModule({
-  declarations: [ListaDePresencaListComponent, ListaDePresencaEditComponent, ListaDePresencaCreateComponent],
+  declarations: [ListaDePresencaListComponent, ListaDePresencaEditComponent, ListaDePresencaCreateComponent, AuthComponent],
   imports: [
     CommonModule,
     FormsModule,
